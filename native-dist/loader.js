@@ -181,6 +181,13 @@ body:is([data-dsh-desktop-mode="advanced"], [data-dsh-desktop-mode="extended"]) 
    The .rail variant (36px circle) inherits this too. */
 ._6leWHq_trigger {
   box-shadow: var(--dsw-elevation-soft) !important;
+}
+/* Inline code inside assistant markdown. Harness paints it with
+   --dsw-alias-markdown-inline-code, a near-black/near-white solid; this fork
+   uses one neutral translucent grey that reads the same in both themes.
+   The _markdown_kcgor_5 hash is generated when apps/web is built. */
+._markdown_kcgor_5 :not(pre) > code {
+  background-color: #6d6d6d80 !important;
 }`;
   }
 
