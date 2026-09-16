@@ -1,6 +1,6 @@
 {
   "name": "dsh-theme-sea",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "type": "module",
   "description": "Realtime WebGPU ocean skin for DeepSeek Harness on Chrome and Edge",
   "repository": {
@@ -52,6 +52,7 @@
   },
   "scripts": {
     "dev": "node scripts/dev-watch.mjs",
+    "release": "node scripts/release.mjs",
     "build": "node scripts/build-runtime.mjs && node scripts/build-dsh-bundle.mjs",
     "build:site": "node scripts/build-pages.mjs",
     "check:generated": "node scripts/build-runtime.mjs --check && node scripts/build-dsh-bundle.mjs --check",
