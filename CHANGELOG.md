@@ -2,6 +2,36 @@
 
 All notable changes to Open Sea Skin are documented here.
 
+## 1.2.7 — 2026-09-16
+
+### Fixed
+
+- DSH plugin installs load at all. `cordis.patch.yml` still declared the
+  upstream name `open-sea-skin`, but Cordis uses that `name` as the module
+  specifier it `import()`s, so every install died at startup with `Cannot
+  find package 'open-sea-skin'`. The entry now declares `name: dsh-theme-sea`,
+  matching `package.json`.
+- The browser module registers under the package name as well.
+  `dsh-client-modules` addresses client bundles as
+  `/plugins/??<package>/client.js` and requires `__ModuleLoader__.load` to
+  have registered that exact id; the generated bundle still used
+  `open-sea-skin`, so the mismatch aborted plugin loading for the whole
+  profile rather than for this skin alone. `scripts/build-dsh-bundle.mjs`
+  now reads the id from `package.json`, so the two cannot drift apart again.
+
+### Documentation
+
+- Install commands, the extension ZIP link and the static installer's pinned
+  version now point at v1.2.7 instead of v1.2.5.
+
+## 1.2.6 — 2026-09-16
+
+### Fixed
+
+- Inline code inside assistant markdown uses one neutral translucent grey
+  instead of Harness's near-black or near-white solid, so it reads the same
+  in both themes.
+
 ## 1.2.4 — 2026-09-09
 
 ### Fixed

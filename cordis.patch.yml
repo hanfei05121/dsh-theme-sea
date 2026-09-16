@@ -2,5 +2,8 @@
 # `dsh plugin --profile web add github:hanfei05121/dsh-theme-sea` adds the Host
 # route and the matching browser module without modifying Harness source.
 - insert:
+    # `name` is the npm package Cordis imports, so it must match the package
+    # name in package.json. `id` stays open-sea-skin: it is the plugin's own
+    # identity (host row, asset route).
     - id: open-sea-skin
-      name: open-sea-skin
+      name: dsh-theme-sea

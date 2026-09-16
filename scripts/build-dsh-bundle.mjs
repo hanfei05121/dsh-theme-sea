@@ -6,6 +6,11 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const check = process.argv.includes('--check')
 const target = resolve(root, 'plugin/client.js')
 const core = readFileSync(resolve(root, 'shared/skin-core.js'), 'utf8')
+// The browser bundle is addressed by package name: dsh-client-modules builds
+// `/plugins/??<pkg>/client.js` from the loader entry id and then requires
+// __ModuleLoader__.load to have registered exactly that id. Reading the name
+// from package.json keeps the two from drifting apart again.
+const packageName = JSON.parse(readFileSync(resolve(root, 'package.json'), 'utf8')).name
 
 const adapter = String.raw`
   const KEYS = Object.freeze({
@@ -59,7 +64,7 @@ const adapter = String.raw`
 }});
 `
 
-const expected = `// GENERATED from shared/skin-core.js. Run npm run build after editing shared sources.\nwindow.__ModuleLoader__.load({ id: "open-sea-skin", factory: (require) => {\n  var module = { exports: {} };\n  var exports = module.exports;\n${core}\n${adapter}`
+const expected = `// GENERATED from shared/skin-core.js. Run npm run build after editing shared sources.\nwindow.__ModuleLoader__.load({ id: ${JSON.stringify(packageName)}, factory: (require) => {\n  var module = { exports: {} };\n  var exports = module.exports;\n${core}\n${adapter}`
 
 if (check) {
   if (!existsSync(target) || readFileSync(target, 'utf8') !== expected) {

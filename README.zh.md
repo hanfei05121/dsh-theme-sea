@@ -79,18 +79,18 @@
 
 ### 1. DSH 插件
 
-**版本状态：** 本仓库以 GitHub 标签 **v1.2.5** 发布；仓库内已包含构建产物，安装时无需编译。`dsh-theme-sea` 尚未发布到 npm。
+**版本状态：** 本仓库以 GitHub 标签 **v1.2.7** 发布；仓库内已包含构建产物，安装时无需编译。`dsh-theme-sea` 尚未发布到 npm。
 
 直接从 GitHub 标签安装：
 
 ```sh
-dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.5'
+dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.7'
 ```
 
 发布到 npm 之后，也可以使用：
 
 ```sh
-dsh plugin --profile web add dsh-theme-sea@1.2.5
+dsh plugin --profile web add dsh-theme-sea@1.2.7
 ```
 
 安装后重启 Harness、刷新页面，再点击左下角的**皮肤设置**。DSH Desktop 用户可通过托管插件安装器安装，并从桌面设置重启；市场能提供的更新版本取决于目录同步与安装来源。
@@ -101,7 +101,7 @@ dsh plugin --profile web add dsh-theme-sea@1.2.5
 
 ### 2. Chrome / Edge 扩展
 
-1. [下载扩展 ZIP](https://github.com/hanfei05121/dsh-theme-sea/releases/download/v1.2.5/open-sea-skin-extension-v1.2.5.zip) 并解压。
+1. [下载扩展 ZIP](https://github.com/hanfei05121/dsh-theme-sea/releases/download/v1.2.7/open-sea-skin-extension-v1.2.7.zip) 并解压。
 2. 打开 `chrome://extensions` 或 `edge://extensions`，开启**开发者模式**。
 3. 点击**加载已解压的扩展程序**，选择包含 `manifest.json` 的解压目录；如果克隆了仓库，则选择 `extension/`。
 4. 打开 `127.0.0.1` 或 `localhost` 上的 Harness，刷新一次。

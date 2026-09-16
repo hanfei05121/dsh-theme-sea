@@ -79,18 +79,18 @@ Wave size stays at 56 while the light moves from Midday to Dusk.
 
 ### 1. DSH plugin
 
-**Release status:** this fork ships as GitHub tag **v1.2.5**; the repository already carries the built assets, so nothing is compiled at install time. `dsh-theme-sea` is not published on npm yet.
+**Release status:** this fork ships as GitHub tag **v1.2.7**; the repository already carries the built assets, so nothing is compiled at install time. `dsh-theme-sea` is not published on npm yet.
 
 Install straight from the GitHub tag:
 
 ```sh
-dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.5'
+dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.7'
 ```
 
 Once it is on npm, this also works:
 
 ```sh
-dsh plugin --profile web add dsh-theme-sea@1.2.5
+dsh plugin --profile web add dsh-theme-sea@1.2.7
 ```
 
 Restart Harness, reload its page, then open **Skin settings** at the lower left. In DSH Desktop, use the managed plugin installer and restart from Desktop settings; available update versions depend on the catalog and installation source.
@@ -101,7 +101,7 @@ Restart Harness, reload its page, then open **Skin settings** at the lower left.
 
 ### 2. Chrome / Edge extension
 
-1. [Download the extension ZIP](https://github.com/hanfei05121/dsh-theme-sea/releases/download/v1.2.5/open-sea-skin-extension-v1.2.5.zip) and unzip it.
+1. [Download the extension ZIP](https://github.com/hanfei05121/dsh-theme-sea/releases/download/v1.2.7/open-sea-skin-extension-v1.2.7.zip) and unzip it.
 2. Open `chrome://extensions` or `edge://extensions`; enable **Developer mode**.
 3. Choose **Load unpacked** and select the extracted folder containing `manifest.json`. If you cloned the repository, choose `extension/`.
 4. Open your Harness page on `127.0.0.1` or `localhost` and reload it.

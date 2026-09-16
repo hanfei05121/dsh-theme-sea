@@ -7,7 +7,7 @@ route. It does not modify the Harness checkout.
 ## Install a release
 
 ```sh
-dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.5'
+dsh plugin --profile web add 'github:hanfei05121/dsh-theme-sea#v1.2.7'
 dsh web
 ```
 
@@ -19,13 +19,13 @@ are saved locally in that browser profile.
 form works too:
 
 ```sh
-dsh plugin --profile web add dsh-theme-sea@1.2.5
+dsh plugin --profile web add dsh-theme-sea@1.2.7
 ```
 
 ## DSH Desktop
 
 In **Settings → Plugin Market → Installed**, update `dsh-theme-sea` to
-`1.2.5` or newer and restart Harness using the desktop Settings menu. The
+`1.2.7` or newer and restart Harness using the desktop Settings menu. The
 market's **Themes** tab lists this project under **Themes & Appearance**.
 Until the package reaches npm, install the GitHub tag through the market's
 package installer instead.

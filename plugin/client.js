@@ -1,5 +1,5 @@
 // GENERATED from shared/skin-core.js. Run npm run build after editing shared sources.
-window.__ModuleLoader__.load({ id: "open-sea-skin", factory: (require) => {
+window.__ModuleLoader__.load({ id: "dsh-theme-sea", factory: (require) => {
   var module = { exports: {} };
   var exports = module.exports;
 // Open Sea Skin shared host-page controller.
